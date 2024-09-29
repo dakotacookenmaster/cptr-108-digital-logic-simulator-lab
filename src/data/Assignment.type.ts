@@ -2,7 +2,14 @@ export type Assignment = {
     canSkipAnyQuestion: boolean,
     gatesProvidedInEveryQuestion: string[],
     questions: {
-        instructions: Instruction[],
+        instructions: {
+            title: string,
+            description: string,
+            resources: {
+                title: string,
+                link: string,
+            }[]
+        },
         gatesProvided: string[],
         canSkip?: boolean,
         answer: {
